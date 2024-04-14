@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>936</width>
+    <width>1142</width>
     <height>600</height>
    </rect>
   </property>
@@ -36,7 +36,7 @@
       </rect>
      </property>
     </widget>
-    <widget class="QCheckBox" name="checkBox">
+    <widget class="QCheckBox" name="cb_EnAlarm1">
      <property name="geometry">
       <rect>
        <x>40</x>
@@ -129,6 +129,58 @@
        <string>Temperature Low Threshold [°C]</string>
       </property>
      </widget>
+     <widget class="QPushButton" name="alm_TempHigh1">
+      <property name="geometry">
+       <rect>
+        <x>110</x>
+        <y>40</y>
+        <width>31</width>
+        <height>29</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_9">
+      <property name="geometry">
+       <rect>
+        <x>150</x>
+        <y>45</y>
+        <width>63</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Alarm</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="alm_TempHigh1_2">
+      <property name="geometry">
+       <rect>
+        <x>110</x>
+        <y>100</y>
+        <width>31</width>
+        <height>29</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_10">
+      <property name="geometry">
+       <rect>
+        <x>150</x>
+        <y>100</y>
+        <width>63</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Alarm</string>
+      </property>
+     </widget>
     </widget>
     <widget class="QPushButton" name="btn_ReadTemp1">
      <property name="geometry">
@@ -141,19 +193,6 @@
      </property>
      <property name="text">
       <string>Read</string>
-     </property>
-    </widget>
-    <widget class="QPushButton" name="btn_Stop1">
-     <property name="geometry">
-      <rect>
-       <x>210</x>
-       <y>200</y>
-       <width>83</width>
-       <height>29</height>
-      </rect>
-     </property>
-     <property name="text">
-      <string>Stop</string>
      </property>
     </widget>
    </widget>
@@ -272,6 +311,58 @@
        <string>Temperature Low Threshold [°C]</string>
       </property>
      </widget>
+     <widget class="QPushButton" name="alm_TempHigh1_3">
+      <property name="geometry">
+       <rect>
+        <x>110</x>
+        <y>40</y>
+        <width>31</width>
+        <height>29</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="alm_TempHigh1_4">
+      <property name="geometry">
+       <rect>
+        <x>110</x>
+        <y>100</y>
+        <width>31</width>
+        <height>29</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_11">
+      <property name="geometry">
+       <rect>
+        <x>150</x>
+        <y>40</y>
+        <width>63</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Alarm</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_12">
+      <property name="geometry">
+       <rect>
+        <x>150</x>
+        <y>100</y>
+        <width>63</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Alarm</string>
+      </property>
+     </widget>
     </widget>
     <widget class="QPushButton" name="btn_ReadTemp2">
      <property name="geometry">
@@ -286,80 +377,115 @@
       <string>Read</string>
      </property>
     </widget>
-    <widget class="QPushButton" name="btn_Stop2">
+   </widget>
+   <widget class="QGroupBox" name="groupBox_3">
+    <property name="geometry">
+     <rect>
+      <x>820</x>
+      <y>340</y>
+      <width>211</width>
+      <height>121</height>
+     </rect>
+    </property>
+    <property name="title">
+     <string>Sample Time (sec)</string>
+    </property>
+    <widget class="QComboBox" name="cbb_SampleTime">
      <property name="geometry">
       <rect>
-       <x>210</x>
-       <y>200</y>
+       <x>20</x>
+       <y>40</y>
+       <width>171</width>
+       <height>28</height>
+      </rect>
+     </property>
+     <item>
+      <property name="text">
+       <string>Select Sample Time</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>5</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>10</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>30</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>60</string>
+      </property>
+     </item>
+    </widget>
+    <widget class="QPushButton" name="btn_Setting">
+     <property name="geometry">
+      <rect>
+       <x>60</x>
+       <y>80</y>
        <width>83</width>
        <height>29</height>
       </rect>
      </property>
      <property name="text">
-      <string>Stop</string>
-     </property>
-    </widget>
-   </widget>
-   <widget class="QGroupBox" name="groupBox_3">
-    <property name="geometry">
-     <rect>
-      <x>650</x>
-      <y>30</y>
-      <width>211</width>
-      <height>81</height>
-     </rect>
-    </property>
-    <property name="title">
-     <string>Sample Time</string>
-    </property>
-    <widget class="QComboBox" name="ccb_SampleTime">
-     <property name="geometry">
-      <rect>
-       <x>20</x>
-       <y>40</y>
-       <width>131</width>
-       <height>28</height>
-      </rect>
+      <string>Setting</string>
      </property>
     </widget>
    </widget>
    <widget class="QGroupBox" name="groupBox_4">
     <property name="geometry">
      <rect>
-      <x>650</x>
-      <y>140</y>
-      <width>211</width>
-      <height>191</height>
+      <x>520</x>
+      <y>330</y>
+      <width>241</width>
+      <height>171</height>
      </rect>
     </property>
     <property name="title">
      <string>Connect</string>
     </property>
-    <widget class="QComboBox" name="ccb_COM">
+    <widget class="QComboBox" name="cbb_COM">
      <property name="geometry">
       <rect>
        <x>100</x>
-       <y>60</y>
-       <width>100</width>
+       <y>40</y>
+       <width>121</width>
        <height>28</height>
       </rect>
      </property>
+     <item>
+      <property name="text">
+       <string>Select COM</string>
+      </property>
+     </item>
     </widget>
-    <widget class="QComboBox" name="ccb_Baudrate">
+    <widget class="QComboBox" name="cbb_Baudrate">
      <property name="geometry">
       <rect>
        <x>100</x>
-       <y>110</y>
-       <width>100</width>
+       <y>90</y>
+       <width>121</width>
        <height>28</height>
       </rect>
      </property>
+     <item>
+      <property name="text">
+       <string>Select Baudrate</string>
+      </property>
+     </item>
     </widget>
     <widget class="QLabel" name="label_7">
      <property name="geometry">
       <rect>
        <x>20</x>
-       <y>60</y>
+       <y>40</y>
        <width>60</width>
        <height>20</height>
       </rect>
@@ -372,7 +498,7 @@
      <property name="geometry">
       <rect>
        <x>20</x>
-       <y>110</y>
+       <y>90</y>
        <width>63</width>
        <height>20</height>
       </rect>
@@ -385,7 +511,7 @@
      <property name="geometry">
       <rect>
        <x>20</x>
-       <y>150</y>
+       <y>130</y>
        <width>83</width>
        <height>29</height>
       </rect>
@@ -394,12 +520,25 @@
       <string>Connect</string>
      </property>
     </widget>
+    <widget class="QPushButton" name="btn_Refresh">
+     <property name="geometry">
+      <rect>
+       <x>130</x>
+       <y>130</y>
+       <width>83</width>
+       <height>29</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Refresh</string>
+     </property>
+    </widget>
    </widget>
    <widget class="QPushButton" name="btn_Close">
     <property name="geometry">
      <rect>
-      <x>820</x>
-      <y>460</y>
+      <x>1040</x>
+      <y>480</y>
       <width>83</width>
       <height>29</height>
      </rect>
@@ -408,13 +547,111 @@
      <string>Close</string>
     </property>
    </widget>
+   <widget class="QGroupBox" name="groupBox_5">
+    <property name="geometry">
+     <rect>
+      <x>520</x>
+      <y>10</y>
+      <width>291</width>
+      <height>311</height>
+     </rect>
+    </property>
+    <property name="title">
+     <string>Data Received</string>
+    </property>
+    <widget class="QTextEdit" name="txt_DataReceived">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>30</y>
+       <width>271</width>
+       <height>231</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="btn_ClearData">
+     <property name="geometry">
+      <rect>
+       <x>100</x>
+       <y>270</y>
+       <width>83</width>
+       <height>29</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Clear</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="btn_ReadData">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>270</y>
+       <width>83</width>
+       <height>29</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Read Data</string>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QGroupBox" name="groupBox_6">
+    <property name="geometry">
+     <rect>
+      <x>820</x>
+      <y>10</y>
+      <width>291</width>
+      <height>311</height>
+     </rect>
+    </property>
+    <property name="title">
+     <string>Notification</string>
+    </property>
+    <widget class="QTextEdit" name="txt_Notification">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>30</y>
+       <width>271</width>
+       <height>231</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="btn_ClearNoti">
+     <property name="geometry">
+      <rect>
+       <x>100</x>
+       <y>270</y>
+       <width>83</width>
+       <height>29</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Clear</string>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QCheckBox" name="checkBox_3">
+    <property name="geometry">
+     <rect>
+      <x>880</x>
+      <y>480</y>
+      <width>93</width>
+      <height>26</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Save data</string>
+    </property>
+   </widget>
   </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>936</width>
+     <width>1142</width>
      <height>25</height>
     </rect>
    </property>

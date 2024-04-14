@@ -13,9 +13,13 @@ VPATH += src/
 
 SOURCES += \
     main.cpp \
+    src/crc16.cpp \
+    src/frame_data.cpp \
     src/mainwindow.cpp
 
 HEADERS += \
+    inc/crc16.h \
+    inc/frame_data.h \
     inc/mainwindow.h
 
 FORMS += \
