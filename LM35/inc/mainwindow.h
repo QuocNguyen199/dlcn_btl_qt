@@ -20,7 +20,7 @@
 #define READ_SENSOR_2 			0x02
 #define SETTING     			0x03
 #define STOP_READ_SENSOR_1		0x04
-#define STOP_READ_SENSOR_		0x05
+#define STOP_READ_SENSOR_2		0x05
 #define DATA_SENSOR_1			0x06
 #define DATA_SENSOR_2			0x07
 #define SETTING_SUCCESSFULLY	0x08
@@ -47,13 +47,13 @@ private slots:
 
     void show_notice(const QString mess, const Qt::GlobalColor textColor);
 
-    void send_data(uint8_t mode);
+    void show_received_data(const QString mess, const Qt::GlobalColor textColor);
+
+    void send_data(uint8_t cmd, QByteArray data,  const QString mess);
 
     void received_data_from_STM32();
 
     void on_btn_Connect_clicked();
-
-    void on_btn_Close_clicked();
 
     void init_window();
 
@@ -66,6 +66,10 @@ private slots:
     void on_btn_ReadTemp2_clicked();
 
     void on_btn_Refresh_clicked();
+
+    void on_btn_Setting_clicked();
+
+    void on_btn_ReadData_clicked();
 
 private:
     Ui::MainWindow *ui;

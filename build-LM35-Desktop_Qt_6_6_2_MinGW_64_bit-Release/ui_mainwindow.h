@@ -32,7 +32,7 @@ public:
     QWidget *centralwidget;
     QGroupBox *groupBox;
     QTextEdit *txt_TempSensor1;
-    QCheckBox *checkBox;
+    QCheckBox *cb_EnAlarm1;
     QLabel *label;
     QFrame *frame;
     QSpinBox *spb_TempHighThres1;
@@ -68,10 +68,10 @@ public:
     QLabel *label_8;
     QPushButton *btn_Connect;
     QPushButton *btn_Refresh;
-    QPushButton *btn_Close;
     QGroupBox *groupBox_5;
     QTextEdit *txt_DataReceived;
     QPushButton *btn_ClearData;
+    QPushButton *btn_ReadData;
     QGroupBox *groupBox_6;
     QTextEdit *txt_Notification;
     QPushButton *btn_ClearNoti;
@@ -92,9 +92,9 @@ public:
         txt_TempSensor1 = new QTextEdit(groupBox);
         txt_TempSensor1->setObjectName("txt_TempSensor1");
         txt_TempSensor1->setGeometry(QRect(40, 70, 104, 61));
-        checkBox = new QCheckBox(groupBox);
-        checkBox->setObjectName("checkBox");
-        checkBox->setGeometry(QRect(40, 150, 121, 26));
+        cb_EnAlarm1 = new QCheckBox(groupBox);
+        cb_EnAlarm1->setObjectName("cb_EnAlarm1");
+        cb_EnAlarm1->setGeometry(QRect(40, 150, 121, 26));
         label = new QLabel(groupBox);
         label->setObjectName("label");
         label->setGeometry(QRect(150, 80, 63, 40));
@@ -216,9 +216,6 @@ public:
         btn_Refresh = new QPushButton(groupBox_4);
         btn_Refresh->setObjectName("btn_Refresh");
         btn_Refresh->setGeometry(QRect(130, 130, 83, 29));
-        btn_Close = new QPushButton(centralwidget);
-        btn_Close->setObjectName("btn_Close");
-        btn_Close->setGeometry(QRect(1040, 480, 83, 29));
         groupBox_5 = new QGroupBox(centralwidget);
         groupBox_5->setObjectName("groupBox_5");
         groupBox_5->setGeometry(QRect(520, 10, 291, 311));
@@ -227,7 +224,10 @@ public:
         txt_DataReceived->setGeometry(QRect(10, 30, 271, 231));
         btn_ClearData = new QPushButton(groupBox_5);
         btn_ClearData->setObjectName("btn_ClearData");
-        btn_ClearData->setGeometry(QRect(100, 270, 83, 29));
+        btn_ClearData->setGeometry(QRect(180, 270, 83, 29));
+        btn_ReadData = new QPushButton(groupBox_5);
+        btn_ReadData->setObjectName("btn_ReadData");
+        btn_ReadData->setGeometry(QRect(30, 270, 83, 29));
         groupBox_6 = new QGroupBox(centralwidget);
         groupBox_6->setObjectName("groupBox_6");
         groupBox_6->setGeometry(QRect(820, 10, 291, 311));
@@ -258,7 +258,7 @@ public:
     {
         MainWindow->setWindowTitle(QCoreApplication::translate("MainWindow", "MainWindow", nullptr));
         groupBox->setTitle(QCoreApplication::translate("MainWindow", "Temperature Sensor 1", nullptr));
-        checkBox->setText(QCoreApplication::translate("MainWindow", "Enable Alarm", nullptr));
+        cb_EnAlarm1->setText(QCoreApplication::translate("MainWindow", "Enable Alarm", nullptr));
         label->setText(QCoreApplication::translate("MainWindow", "\302\260C", nullptr));
         label_2->setText(QCoreApplication::translate("MainWindow", "Temperature High Threshold [\302\260C]", nullptr));
         label_3->setText(QCoreApplication::translate("MainWindow", "Temperature Low Threshold [\302\260C]", nullptr));
@@ -294,9 +294,9 @@ public:
         label_8->setText(QCoreApplication::translate("MainWindow", "Baudrate", nullptr));
         btn_Connect->setText(QCoreApplication::translate("MainWindow", "Connect", nullptr));
         btn_Refresh->setText(QCoreApplication::translate("MainWindow", "Refresh", nullptr));
-        btn_Close->setText(QCoreApplication::translate("MainWindow", "Close", nullptr));
         groupBox_5->setTitle(QCoreApplication::translate("MainWindow", "Data Received", nullptr));
         btn_ClearData->setText(QCoreApplication::translate("MainWindow", "Clear", nullptr));
+        btn_ReadData->setText(QCoreApplication::translate("MainWindow", "Read Data", nullptr));
         groupBox_6->setTitle(QCoreApplication::translate("MainWindow", "Notification", nullptr));
         btn_ClearNoti->setText(QCoreApplication::translate("MainWindow", "Clear", nullptr));
         checkBox_3->setText(QCoreApplication::translate("MainWindow", "Save data", nullptr));
